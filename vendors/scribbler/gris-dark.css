@@ -19,6 +19,7 @@ li.tags a.active {
 
 .hljs {
 	padding: 1em;
+	font-size: 1.1em;
 }
 
 pre {
@@ -37,6 +38,11 @@ code {
 
 .doc__content {
 	max-width: 680px;
+}
+
+.read-more {
+	display: block;
+	text-align: right;
 }
 
 /* ICONS */
