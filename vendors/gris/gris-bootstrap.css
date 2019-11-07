@@ -3,6 +3,10 @@ body {
 	color: #DFDFDF;
 }
 
+.h2, h2 {
+	font-size: 1.4rem;
+}
+
 a {
 	color: #ABCEA1;
 }
@@ -65,4 +69,14 @@ pre {
 
 code {
 	color: #DCBB73;
+}
+
+.hljs {
+	padding: 1em;
+	font-size: 90%;
+}
+
+.read-more {
+	display: block;
+	text-align: right;
 }
