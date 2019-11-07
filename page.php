@@ -8,7 +8,7 @@
 		</a>
 		<div class="page-date mb-3"><?php echo $page->date() ?></div>
 
-		<div class="page-content">
+		<div class="page-content mb-5">
 		<?php echo $page->content() ?>
 		</div>
 
