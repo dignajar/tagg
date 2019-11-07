@@ -4,9 +4,9 @@
 		<?php Theme::plugins('pageBegin') ?>
 
 		<a href="<?php echo $page->permalink() ?>">
-			<h1 class="page-title"><?php echo $page->title() ?></h1>
+			<h1 class="page-title m-0"><?php echo $page->title() ?></h1>
 		</a>
-		<div class="page-date"><?php echo $page->date() ?></div>
+		<div class="page-date mb-3"><?php echo $page->date() ?></div>
 
 		<div class="page-content">
 		<?php echo $page->content() ?>
