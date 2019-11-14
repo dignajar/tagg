@@ -28,6 +28,10 @@ ul.tags {
 	list-style: none;
 }
 
+p {
+	margin-bottom: 1.3rem;
+}
+
 .border-bottom {
 	border-bottom: 1px solid #444445!important;
 }
@@ -65,6 +69,7 @@ pre {
 	border: 1px solid #444445;
 	color: #DCBA73;
 	overflow-x: auto;
+	margin: 1.5rem 0;
 }
 
 code {
@@ -79,4 +84,15 @@ code {
 .read-more {
 	display: block;
 	text-align: right;
+}
+
+blockquote {
+	margin: 1rem;
+	padding: 0 1rem;
+	color: #ccc;
+	border-left: 4px solid #444445;
+}
+
+.h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-top: 4rem;
 }
