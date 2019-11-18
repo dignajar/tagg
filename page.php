@@ -6,7 +6,7 @@
 		<a href="<?php echo $page->permalink() ?>">
 			<h1 class="page-title m-0"><?php echo $page->title() ?></h1>
 		</a>
-		<div class="page-date mb-3"><?php echo $page->date() ?></div>
+		<div class="page-date mb-3"><?php echo $page->date() ?> <?php echo ($page->dateModified()?' - <i>Last updated: '.$page->dateModified().'</i>':'')?></div>
 
 		<div class="page-content mb-5">
 		<?php echo $page->content() ?>
