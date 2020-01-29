@@ -3,7 +3,6 @@
 <html lang="<?php echo Theme::lang() ?>">
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="Bludit">
 	<?php
@@ -55,7 +54,7 @@
 						} elseif ($WHERE_AM_I=='tag') {
 							$active = ($url->slug()==$key)?'tag-active':'';
 						}
-						// Show the tag in the sidebar if contains some page published
+						// Show the tag in the sidebar only if contains some page published
 						$showTag = false;
 						foreach ($fields['list'] as $pageKey) {
 							if ($pages->db[$pageKey]['type']!='draft') {
@@ -80,9 +79,9 @@
 			<div class="col-md-8 order-md-2 mb-4">
 			<?php
 				if ($WHERE_AM_I=='page') {
-					include(__DIR__.'/page.php');
+					include(__DIR__.'/templates/page.php');
 				} else {
-					include(__DIR__.'/home.php');
+					include(__DIR__.'/templates/home.php');
 				}
 			?>
 			</div>
