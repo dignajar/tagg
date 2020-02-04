@@ -19,10 +19,16 @@
 	?>
 </head>
 <body>
+	<!--
+		Plugins configured before the body start
+	-->
 	<?php Theme::plugins('siteBodyBegin') ?>
 
 	<div class="container">
 
+		<!--
+			Head with site title and social networks
+		-->
 		<div class="row mb-3">
 			<div class="col-md-12">
 				<div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-4 border-bottom">
@@ -39,6 +45,9 @@
 
 		<div class="row">
 
+			<!--
+				Left sidebar with tags
+			-->
 			<div class="col-md-3 order-md-1">
 				<ul class="tags">
 				<?php
@@ -76,6 +85,9 @@
 				</ul>
 			</div>
 
+			<!--
+				Main content
+			-->
 			<div class="col-md-8 order-md-2 mb-4">
 			<?php
 				if ($WHERE_AM_I=='page') {
@@ -88,12 +100,17 @@
 
 		</div>
 
+		<!--
+			Footer
+		-->
 		<footer class="my-5 pt-5 text-muted text-center text-small">
 			<p class="mb-1"><?php echo $site->footer() ?>. Powered by <a href="https://www.bludit.com" target="_blank">Gris</a></p>
 		</footer>
 	</div>
 
-	<!-- JavaScript -->
+	<!--
+		Javascript libraries
+	-->
 	<?php
 		echo Theme::jquery();
 		echo Theme::jsBootstrap();
@@ -101,6 +118,9 @@
 	?>
 	<script>hljs.initHighlightingOnLoad();</script>
 
+	<!--
+		Plugins configured before the body end
+	-->
 	<?php Theme::plugins('siteBodyEnd') ?>
 </body>
 </html>
