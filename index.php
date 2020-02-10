@@ -89,6 +89,11 @@
 		</div>
 
 		<footer class="my-5 pt-5 text-muted text-center text-small">
+			<?php if ($WHERE_AM_I=='home'): ?>
+			<h1><?php echo $site->description() ?></h1>
+			<?php else: ?>
+			<div><?php echo $site->description() ?></div>
+			<?php endif; ?>
 			<p class="mb-1"><?php echo $site->footer() ?>. Powered by <a href="https://www.bludit.com" target="_blank">Gris</a></p>
 		</footer>
 	</div>
