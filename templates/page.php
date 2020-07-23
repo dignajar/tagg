@@ -26,9 +26,39 @@
 </article>
 
 <!--
-	Next and previous page only if they are defined
+	Related posts
 -->
-<div class="clearfix">
+<h2>Related posts</h2>
+<ul class="list-group list-group-flush">
+<?php
+// Get related pages and sort by date
+$relatedPages = $page->related();
+$relatedPagesSortByDate = array();
+foreach ($relatedPages as $pageKey) {
+	$tmpPage = new Page($pageKey);
+	$relatedPagesSortByDate[$tmpPage->date('U')] = new Page($pageKey);
+}
+krsort($relatedPagesSortByDate);
+
+// Print related pages
+foreach ($relatedPagesSortByDate as $related) {
+		echo '<li class="list-group-item">';
+		echo '<a href="'.$related->permalink().'" class="mr-2">'.$related->title().'</a>';
+		$relatedTags = $related->tags(true);
+		foreach ($relatedTags as $tagKey=>$tagName) {
+			echo '<span class="badge badge-primary mr-1 ml-1">'.$tagName.'</span>';
+		}
+		echo '<div class="page-date">'.$related->date();
+		if ($related->dateModified()) {
+			echo '<i> - Last updated: '.$related->dateModified().'</i>';
+		}
+		echo '</div>';
+	  	echo '</li>';
+}
+?>
+</ul>
+
+<!-- <div class="clearfix">
 <?php
 	if ($page->previousKey()) {
 		$previousPage = buildPage($page->previousKey());
@@ -40,7 +70,7 @@
 		echo '<a class="btn btn-primary float-right" href="'.$nextPage->permalink().'">'.$nextPage->title().' &rarr;</a>';
 	}
 ?>
-</div>
+</div> -->
 
 <!--
 	Plugins configured after the pages

@@ -108,3 +108,12 @@ blockquote {
 footer h1 {
 	font-size: 1rem;
 }
+
+li.list-group-item {
+	background: none;
+}
+
+.badge-primary {
+	background: #37373E;
+	color: #D2A700;
+}
